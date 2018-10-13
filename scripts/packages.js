@@ -1,6 +1,6 @@
 // NPM packages (without the org name) that we publish
 const packages = [
-  'core',
+  'core-sysjs',
   'snazzy-info-window',
   'js-marker-clusterer',
 ];

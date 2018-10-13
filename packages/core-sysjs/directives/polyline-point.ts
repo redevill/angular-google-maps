@@ -1,5 +1,5 @@
 import {Directive, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
-import {LatLngLiteral} from '../../core/services/google-maps-types';
+import {LatLngLiteral} from '../services/google-maps-types';
 
 /**
  * AgmPolylinePoint represents one element of a polyline within a  {@link

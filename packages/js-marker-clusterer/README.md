@@ -25,7 +25,7 @@ yarn add js-marker-clusterer @agm/js-marker-clusterer
     import { AppComponent } from './app.component';
 
     // add these imports
-    import { AgmCoreModule } from '@agm/core';
+    import { AgmCoreModule } from '@agm/core-sysjs';
     import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
 
     @NgModule({

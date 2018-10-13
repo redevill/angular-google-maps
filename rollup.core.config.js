@@ -1,7 +1,7 @@
 export default {
-  input: 'dist/packages/core/index.js',
+  input: 'dist/packages/core-sysjs/index.js',
   output: {
-    file: 'dist/packages/core/core.umd.js',
+    file: 'dist/packages/core-sysjs/core.umd.js',
     name: 'ngmaps.core',
     globals: {
       '@angular/core': 'ng.core',
