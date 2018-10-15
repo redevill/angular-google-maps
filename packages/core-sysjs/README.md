@@ -1,13 +1,23 @@
-Angular Google Maps (AGM) Core - Angular 2+ Google Maps components
+Angular Google Maps (AGM) Core - Angular 6 Google Map components
 =========
 
-@agm/core-sysjs contains solutions for the Google Maps JavaScript Core API.
+agm-core-sysjs contains solutions for the Google Maps JavaScript Core API.
 
-The sources for this package are in the [angular-google-maps](https://github.com/SebastianM/angular-google-maps) repository. Please file issues and pull requests against that repo.
+The sources for this package are in the [angular-google-maps](https://github.com/redevill/angular-google-maps) repository.
 
-This package contains different sources for different users:
+The focus of this fork is to fix it to work with SystemJS loader.
+This change may also address some fit-bounds related loading / Object not found errors.
+Please refer to the parent project for issues and fixes
 
-1. The files located in the root dirare ES5 based with ES2015 modules.
-1. Files with the name pattern *.umd.js are UMD bundled modules for fast load times during development.
+### Bug Fixes && deployment adjustments
+<a name="1.0.0-beta.9"></a>
+# [1.0.0-beta.9](https://github.com/redevill/angular-google-maps/compare/1.0.0-beta.4...1.0.0-beta.9) (2018-10-15)
 
+### BREAKING CHANGES
+The project and NPM package name changes:
+
+Parent project name: @agm/core
+This New NPM pkg name: agm-core-sysjs
+
+### The remainder of the distribution is preserved from the parent (SebastianM)
 License: See LICENSE file in this folder.
