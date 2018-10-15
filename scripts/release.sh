@@ -10,4 +10,4 @@ git commit -m "chore(release): add changelog and bump version"
 git push origin master
 # create tag
 # git push origin master --tags
-# npm publish dist
+# change to the folder package to be published and run command npm publish ./
