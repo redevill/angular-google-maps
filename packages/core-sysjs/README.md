@@ -10,8 +10,8 @@ This change may also address some fit-bounds related loading / Object not found 
 Please refer to the parent project for issues and fixes
 
 ### Bug Fixes && deployment adjustments
-<a name="1.0.0-beta.9"></a>
-# [1.0.0-beta.9](https://github.com/redevill/angular-google-maps/compare/1.0.0-beta.4...1.0.0-beta.9) (2018-10-15)
+<a name="1.0.0-beta.11"></a>
+# [1.0.0-beta.11](https://github.com/redevill/angular-google-maps/compare/1.0.0-beta.5...1.0.0-beta.11) (2018-10-15)
 
 ### BREAKING CHANGES
 The project and NPM package name changes:
