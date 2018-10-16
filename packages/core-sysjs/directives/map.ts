@@ -474,17 +474,24 @@ export class AgmMap implements OnChanges, OnInit, OnDestroy {
     this._fitBoundsSubscription = this._fitBoundsService.getBounds$().subscribe(b => this._updateBounds(b));
   }
 
-  protected _updateBounds(bounds: LatLngBounds|LatLngBoundsLiteral) {
-    if (this._isLatLngBoundsLiteral(bounds) && google && google.maps) {
-      const newBounds = <LatLngBounds>google.maps.LatLngBounds();
-      newBounds.union(bounds);
-      bounds = newBounds;
+  protected _updateBounds(bounds: LatLngBounds | LatLngBoundsLiteral) {
+    try { // The if check below is not working to detect that google is undefined
+      if (this._isLatLngBoundsLiteral(bounds) && google && google.maps) {
+        const newBounds = new google.maps.LatLngBounds() as LatLngBounds;
+        newBounds.union(bounds);
+        bounds = newBounds;
+      }
+
+      if (this.usePanning) {
+        this._mapsWrapper.panToBounds(bounds);
+        return;
+      }
+      this._mapsWrapper.fitBounds(bounds);
+    } catch (e) {
+      if (e.message !== 'google is not defined') {
+        throw new Error('Unknown problem with google maps update bounds');
+      }
     }
-    if (this.usePanning) {
-      this._mapsWrapper.panToBounds(bounds);
-      return;
-    }
-    this._mapsWrapper.fitBounds(bounds);
   }
 
   private _isLatLngBoundsLiteral(bounds: LatLngBounds|LatLngBoundsLiteral): bounds is LatLngBoundsLiteral {

@@ -1,3 +1,9 @@
+### BugFix
+<a name="1.0.0-beta.12"></a>
+# [1.0.0-beta.12](https://github.com/redevill/angular-google-maps/compare/1.0.0-beta.11...1.0.0-beta.12) (2018-10-16)
+When the variable 'declare var google: any' has not yet been populated using it, even in an if causes an error.
+Surround area with try catch.
+
 ### Documentations changes
 <a name="1.0.0-beta.11"></a>
 # [1.0.0-beta.11](https://github.com/redevill/angular-google-maps/compare/1.0.0-beta.5...1.0.0-beta.11) (2018-10-15)
